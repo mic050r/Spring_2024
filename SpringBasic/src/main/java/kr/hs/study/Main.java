@@ -23,22 +23,26 @@ public class Main {
 //        TestBean obj2 = ctx.getBean(TestBean.class);
 //        System.out.println("obj2 : " + obj2);
 
-
-        System.out.println("=========================");
-
-        TestBean obj3 = ctx.getBean("t3", TestBean.class);
-        System.out.println("obj3 : " + obj3);
+//
+//        System.out.println("=========================");
+//
+//        TestBean obj3 = ctx.getBean("t3", TestBean.class);
+//        System.out.println("obj3 : " + obj3);
         /*
          No qualifying bean of type 'kr.hs.study.beans.TestBean' available:
          expected single matching bean but found 2: kr.hs.study.beans.TestBean#0,t3
          똑같은 클래스 객체를 생성해서 오류가 발생
          */
 
-        TestBean obj4 = ctx.getBean("t4", TestBean.class);
-        System.out.println("obj4 : " + obj4);
+//        TestBean obj4 = ctx.getBean("t4", TestBean.class);
+//        System.out.println("obj4 : " + obj4);
 
         TestBean obj5 = ctx.getBean("t5", TestBean.class);
         System.out.println("obj5 : " + obj5);
+
+        // t5 객체가지고 와서 obj6에 넣고 출력
+        TestBean obj6 = ctx.getBean("t5", TestBean.class);
+        System.out.println("obj6 : " + obj6);
 
         ctx.close();
     }

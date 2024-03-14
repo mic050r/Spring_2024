@@ -1,10 +1,10 @@
 
-G	java:S106"+Replace this use of System.out by a logger.(Ğ—Íè8Õï†×ã1
-]	java:S125"<This block of commented-out lines of code should be removed.(é‡•ÿøÿÿÿÿ8üêÕã1
-]	java:S125"<This block of commented-out lines of code should be removed.(ÈùÂ½şÿÿÿÿ8Ô¼÷Öã1
-]	java:S125"<This block of commented-out lines of code should be removed.(£º´¾ÿÿÿÿÿ8ù·‘×ã1
-G	java:S106"+Replace this use of System.out by a logger.(¥†ÉÀ8Õï†×ã1
-F	java:S106&"+Replace this use of System.out by a logger.(œÄ{8õ†‡×ã1
-F	java:S106)"+Replace this use of System.out by a logger.(õšÙP8Í¤‡×ã1
+]	java:S125"<This block of commented-out lines of code should be removed.(é‡•ÿøÿÿÿÿ8Ê˜×ã1
+]	java:S125"<This block of commented-out lines of code should be removed.(ÈùÂ½şÿÿÿÿ8Ê˜×ã1
+]	java:S125"<This block of commented-out lines of code should be removed.(£º´¾ÿÿÿÿÿ8Ê˜×ã1
+X	java:S125"<This block of commented-out lines of code should be removed.(—ğ‚™8Ê˜×ã1
+]	java:S125%"<This block of commented-out lines of code should be removed.(Í´»ÿÿÿÿÿ8Ê˜×ã1
+F	java:S106)"+Replace this use of System.out by a logger.(õšÙP8ƒÊ˜×ã1
+G	java:S106-"+Replace this use of System.out by a logger.(®íÒ±8„Ê˜×ã1
 h
-java:S1128"KRemove this unused import 'org.springframework.context.ApplicationContext'.(»Ô»¿8áä‡×ã1
+java:S1128"KRemove this unused import 'org.springframework.context.ApplicationContext'.(»Ô»¿8…Ê˜×ã1
