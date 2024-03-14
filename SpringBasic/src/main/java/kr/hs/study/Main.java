@@ -37,6 +37,9 @@ public class Main {
         TestBean obj4 = ctx.getBean("t4", TestBean.class);
         System.out.println("obj4 : " + obj4);
 
+        TestBean obj5 = ctx.getBean("t5", TestBean.class);
+        System.out.println("obj5 : " + obj5);
+
         ctx.close();
     }
 }

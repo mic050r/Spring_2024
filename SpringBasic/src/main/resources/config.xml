@@ -11,14 +11,15 @@
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 1. TestBean의 객체 만들어줌 == new TestBean() -->
-<!--    <bean class="kr.hs.study.beans.TestBean"/>-->
+    <!--    <bean class="kr.hs.study.beans.TestBean"/>-->
     <!-- 2. TestBean의 객체 만들어줌  == TestBean t1 = new TestBean() -->
-    <!--  1. 객체 생성 코드를 지워주면 t3 잘 실행됨  -->
+    <!-- 2-1. 객체 생성 코드를 지워주면 t3 잘 실행됨  -->
     <bean id="t3" class="kr.hs.study.beans.TestBean"/>
-
     <bean id="t4" class="kr.hs.study.beans.TestBean"/>
 
-
+    <!-- 3. default로 객체 생성이 xml 파일을 로딩할 때 만들어진다.   -->
+    <!-- 3-1. lazy-init="true" : getBean()을 불러올 때 객체 생성 -->
+    <bean id="t5" class="kr.hs.study.beans.TestBean" lazy-init="true"/>
 
 
 </beans>
