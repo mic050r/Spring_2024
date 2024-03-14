@@ -10,13 +10,8 @@
 	                    http://www.springframework.org/schema/aop
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!-- 1. TestBean의 객체 만들어줌 == new TestBean() -->
-<!--    <bean class="kr.hs.study.beans.TestBean"/>-->
-    <!-- 2. TestBean의 객체 만들어줌  == TestBean t1 = new TestBean() -->
-    <!--  1. 객체 생성 코드를 지워주면 t3 잘 실행됨  -->
-    <bean id="t3" class="kr.hs.study.beans.TestBean"/>
 
-    <bean id="t4" class="kr.hs.study.beans.TestBean"/>
+
 
 
 

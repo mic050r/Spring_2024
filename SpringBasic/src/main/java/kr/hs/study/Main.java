@@ -14,8 +14,28 @@ public class Main {
         //  ApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
 
         // obj1에는 TestBean의 주소
-        TestBean obj1 = ctx.getBean(TestBean.class);
-        System.out.println("obj1 : " + obj1);
+//        TestBean obj1 = ctx.getBean(TestBean.class);
+//        System.out.println("obj1 : " + obj1);
+//        System.out.println("=========================");
+
+        // 기본 생성자 1번 출력 , 똑같은 주소 출력
+        // 객체를 다시 생성해도 똑같은게 가져와짐 => 싱글폼
+//        TestBean obj2 = ctx.getBean(TestBean.class);
+//        System.out.println("obj2 : " + obj2);
+
+
+        System.out.println("=========================");
+
+        TestBean obj3 = ctx.getBean("t3", TestBean.class);
+        System.out.println("obj3 : " + obj3);
+        /*
+         No qualifying bean of type 'kr.hs.study.beans.TestBean' available:
+         expected single matching bean but found 2: kr.hs.study.beans.TestBean#0,t3
+         똑같은 클래스 객체를 생성해서 오류가 발생
+         */
+
+        TestBean obj4 = ctx.getBean("t4", TestBean.class);
+        System.out.println("obj4 : " + obj4);
 
         ctx.close();
     }
