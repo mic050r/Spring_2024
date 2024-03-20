@@ -11,7 +11,7 @@
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 <!--    객체 생성 후 자동으로 init-method로 지정된 메소드가 호출된다-->
-    <bean id="t1" class="kr.hs.study.beans.TestBean" init-method="initMethod"/>
+    <bean id="t1" class="kr.hs.study.beans.TestBean" init-method="initMethod" destroy-method="destroyMethod"/>
 
 
 

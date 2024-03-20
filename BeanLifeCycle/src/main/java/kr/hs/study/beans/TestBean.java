@@ -8,4 +8,8 @@ public class TestBean {
     public void initMethod() {
         System.out.println("생성자 이후 자동으로 실행되는 메소드");
     }
+
+    public void destroyMethod() {
+        System.out.println("안녕히 가세요");
+    }
 }
