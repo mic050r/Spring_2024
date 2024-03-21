@@ -28,6 +28,19 @@
         <constructor-arg value="66.66" type="double" index="1"/>
     </bean>
 
+    <!-- 2. DataBean2 객체 만들기 -->
+    <!-- 2-1.  첫번째 방법      -->
+    <bean  id="t6" class="kr.hs.study.beans.TestBean2">
+        <constructor-arg>
+            <bean class="kr.hs.study.beans.DataBean2"/>
+        </constructor-arg>
+    </bean>
+    <!--  2-2. 두번째 방법      -->
+    <bean  id="dd" class="kr.hs.study.beans.TestBean2"/>
+    <bean  id="t6" class="kr.hs.study.beans.TestBean2">
+        <constructor-arg ref="dd"/>
+    </bean>
+
 
 
 
