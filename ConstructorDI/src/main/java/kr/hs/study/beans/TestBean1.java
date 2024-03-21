@@ -1,9 +1,9 @@
 package kr.hs.study.beans;
 
 public class TestBean1 {
-    private int data1;
-    private double data2;
-    private String data3;
+    private final int data1;
+    private final double data2;
+    private final String data3;
 
 
     public TestBean1() {
@@ -32,6 +32,12 @@ public class TestBean1 {
         System.out.println("String 하나 받는 생성자");
         this.data1 = 55;
         this.data2 = 55.55;
+        this.data3 = data3;
+    }
+
+    public TestBean1(int data1, double data2, String data3) {
+        this.data1 = data1;
+        this.data2 = data2;
         this.data3 = data3;
     }
 
