@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context-5.0.2.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!--    getBean()할 때 객체가 생성됨-->
+<!--    <bean id="t1" class="kr.hs.study.beans.TestBean3" lazy-init="true"/>-->
+
+<!--    스프링은 싱글톤(객체가 만들어지면 계속 이 객체 사용)인데 getBean()할 때마다 새로운 객체를 가지고 오고 싶다면?-->
+    <bean id="t1" class="kr.hs.study.beans.TestBean3" scope="prototype"/>
+
+
+
+
+</beans>
