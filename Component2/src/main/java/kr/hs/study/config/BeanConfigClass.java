@@ -1,6 +1,7 @@
 package kr.hs.study.config;
 
 import kr.hs.study.beans.DataBean1;
+import kr.hs.study.beans.DataBean3;
 import kr.hs.study.beans.TestBean1;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,4 +21,6 @@ public class BeanConfigClass {
     public DataBean1 java2() {
         return new DataBean1();
     }
+
+
 }
