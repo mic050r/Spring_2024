@@ -4,22 +4,27 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-	                    http://www.springframework.org/schema/beans/spring-beans.xsd
-	                    http://www.springframework.org/schema/context
-	                    http://www.springframework.org/schema/context/spring-context-5.0.2.xsd
-	                    http://www.springframework.org/schema/aop
-	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+                       http://www.springframework.org/schema/beans/spring-beans.xsd
+                       http://www.springframework.org/schema/context
+                       http://www.springframework.org/schema/context/spring-context-5.0.2.xsd
+                       http://www.springframework.org/schema/aop
+                       http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <bean id="t1" class="kr.hs.study.beans.TestBean1"/>
     <bean id="t2" class="kr.hs.study.beans2.TestBean1"/>
-    <bean id="a1" class="kr.hs.study.advice.AdviceClass"/>
+    <bean id="advisor" class="kr.hs.study.advice.AdviceClass"/>
 
-    <aop:config>
 
-        <aop:aspect ref="a1"> <!-- 충고등록 -->
-        <aop:pointcut id="point" expression="execution(* method1())"/> <!-- pointcut 등록 -->
-            <aop:before method="before" pointcut-ref="point"/>
-        </aop:aspect>
-    </aop:config>
+<aop:config>
+    <!--        충고등록-->
+    <aop:aspect ref="advisor">
+        <aop:pointcut id="point" expression="execution(* method())"/>   <!--pointcut 등록-->
+        <!--            <aop:before method="before" pointcut-ref="point"/>-->
+        <!--            <aop:after method="after" pointcut-ref="point"/>-->
+        <!--            <aop:after-returning method="afterReturning" pointcut-ref="point"/>-->
+        <aop:after-throwing method="afterThrowing" pointcut-ref="point" throwing="e"/>
+    </aop:aspect>
+</aop:config>
+
+
 </beans>
-

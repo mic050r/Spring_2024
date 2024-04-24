@@ -2,6 +2,7 @@ package kr.hs.study.beans;
 
 public class TestBean1 {
     public void method1() {
+        int a = 100/0;
         System.out.println("TestBean1의 method1 호출");
     }
 
