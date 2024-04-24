@@ -10,18 +10,16 @@
 	                    http://www.springframework.org/schema/aop
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!-- 1. 관심사(메소드) 클래스가 있는 클래스를 bean으로 등록 -->
     <bean id="t1" class="kr.hs.study.beans.TestBean1"/>
-    <!-- 2. advice(충고)들이 있는 클래스를 bean으로 등록-->
-    <bean id="advisor" class="kr.hs.study.adviser.AdviceClass"/>
+    <bean id="t2" class="kr.hs.study.beans2.TestBean1"/>
+    <bean id="a1" class="kr.hs.study.advice.AdviceClass"/>
 
-    <aop:config> <!-- 메서드를 지켜보라고 스프링한테 명령을 내리는 것. -->
-        <!-- 3. 충고들 등록-->
-        <aop:aspect ref="advisor">
-            <!-- 4. 관심사 등록-->
-            <aop:pointcut id="point" expression="execution(* kr.hs.study.beans.TestBean1.method1())"/>
-            <aop:before method="before" pointcut-ref="point" />
+    <aop:config>
+
+        <aop:aspect ref="a1"> <!-- 충고등록 -->
+        <aop:pointcut id="point" expression="execution(* method1())"/> <!-- pointcut 등록 -->
+            <aop:before method="before" pointcut-ref="point"/>
         </aop:aspect>
     </aop:config>
-
 </beans>
+
